@@ -19,7 +19,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPr
     let uptime = clockString(_uptime)
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let videoUrl = 'https://telegra.ph/file/26c84fe087c171d4641c3.mp4';
+let videoUrl = 'https://telegra.ph/file/fe1c46739cc6612f71934.mp4';
   let vn = './media/menu.mp3';
   const user = global.db.data.users[m.sender];
   const {money, joincount} = global.db.data.users[m.sender];
@@ -35,26 +35,23 @@ let more = String.fromCharCode(8206)
 let readMore = more.repeat(900) 
   const taguser = '@' +  m.sender.split('@s.whatsapp.net')[0];
 let str = ` 
-*⎔•┗╼╼╃✦⊰💧⊱✦╄╼╼┛•⎔*
-
+*「✧|───✦❯┇💎┇❮✦───|✧」*
  *❐↞『نورت ${taguser}』*
 *〄┃اوامـر الـلـفل┃ ↞ ❮🎖️❯*
-*✦━✤━ •⊰❖⊱• ━✤━✦*
-*❯ ┇.لفل 』*
-*❯ ┇.بروفايل 』*
-*❯ ┇.يومي 』*
-*❯ ┇.رتبة 』*
-*❯ ┇.شراء 』*
-*❯ ┇.لجواهر 』*
-*❯ ┇.بنك 』*
-*❯ ┇.سرقه 』*
-*❯ ┇.رانك 』*
-*❯ ┇.البنك』*
-*❯ ┇.تحويل』*
-*❯ ┇.اكسبي』*
-*✦━✤━ •⊰❖⊱• ━✤━✦*
+*✧━━ • ━ 「 ✤ 」 ━ • ━━✧*
+*❄️✬⃝┇.لفل 』*
+*❄️✬⃝┇.بروفايل 』*
+*❄️✬⃝┇.يومي 』*
+*❄️✬⃝┇.رتبة 』*
+*❄️✬⃝┇.بنك 』*
+*❄️✬⃝┇.سرقه 』*
+*❄️✬⃝┇.رانك 』*
+*❄️✬⃝┇.البنك』*
+*❄️✬⃝┇.تحويل』*
+*❄️✬⃝┇.اضف-اكسبي』*
+*✧━━ • ━ 「 ✤ 」 ━ • ━━✧*
 ❯⏐ 𝐵𝛩𝑇 𝐸𝑅𝑺𝑁
-*⎔•┗╼╼╃✦⊰💧⊱✦╄╼╼┛•⎔*
+*「✧|───✦❯┇💎┇❮✦───|✧」*
 `.trim();
 
 conn.sendMessage(m.chat, {
@@ -63,9 +60,9 @@ conn.sendMessage(m.chat, {
   gifPlayback: true,gifAttribution: 0
     }, { quoted: m });
 }; 
-handler.help = ['main']
-handler.tags = ['ggsy']
-handler.command = ['امر6'] 
+handler.help = ['madin']
+handler.tags = ['gfgsy']
+handler.command = ['ميزو6'] 
 
 export default handler
 function clockString(ms) {
