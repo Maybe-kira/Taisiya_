@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
     conn.sendFile(m.chat, 'https://telegra.ph/file/11d860ee4a36e76e9add1.jpg', 'image.jpg', message, m);
 };
 
-handler.customPrefix = /^(ميزو 2|.ميزو 1|.ميزو|.ميزو 3|.ميزو 4|.ميزو 5|.ميزو 6|.ميزو 7|.ميزو 8.)$/i;
+handler.customPrefix = /^(ميزو 2|.ميزو 1|.ميزو|.ميزو 3|.ميزو 4|.ميزو 5|.ميزو 6|.ميزو 7|.ميزو 8.|ميزو)$/i;
 handler.command = new RegExp;
 
 export default handler;
