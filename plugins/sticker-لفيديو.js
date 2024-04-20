@@ -18,7 +18,7 @@ let handler = async (m, { conn }) => {
             '-shortest'
         ], 'mp3', 'mp4')
     }
-    await conn.sendFile(m.chat, out, 'tovid.mp4', '*✓┃🚫┃تـــم الـفـيديـو ✦*' , m)
+    await conn.sendFile(m.chat, out, 'tovid.mp4', '*✓┃🌸┃تـــم الـفـيديـو ✦*' , m)
 }
 handler.help = ['tovid']
 handler.tags = ['sticker']
