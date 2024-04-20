@@ -9,19 +9,19 @@ let handler = async (m, { conn }) => {
     let name = conn.getName(who)
     let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
     let str = `
-    *⎔⋅• ┗╼╼╃✦⊰💧⊱✦╄╼╾┛ •⋅⎔*
+    *「✧|───✦❯┇💎┇❮✦───|✧」* 
 *⎔↞┃الاسم🀄 ↞* ${username} 
 *⎔↞┃اسم🎖 ↞* ${registered ? name : ''}
-*⎔↞┃منشن🎴 ↞* @${who.replace(/@.+/, '')}
+*⎔↞┃منشن🎀 ↞* @${who.replace(/@.+/, '')}
 *⎔↞┃رقم📮 ↞* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 *⎔↞┃رابط⚡️ ↞* https://wa.me/${who.split`@`[0]}
 *⎔↞┃عمر🔍↞* ${registered ? age : ''} Tahun
 *⎔↞┃شريك🍁 ↞*  ${pasangan ? `@${pasangan.split("@")[0]}` : `Tidak Punya`}
 *⎔↞┃طلب📠 ↞* ${registered ? 'Terdaftar': 'Tidak'}
-*⎔↞┃مميز📜 ↞* ${premium ? "Aktif" :"Tidak"}
+*⎔↞┃مميز🌷 ↞* ${premium ? "Aktif" :"Tidak"}
 *⎔↞┃وقت مميز ↞⏱️* 
 ${clockString(user.premiumTime)}
-*⎔⋅• ┗╼╼╃✦⊰💧⊱✦╄╼╾┛ •⋅⎔*
+*「✧|───✦❯┇💎┇❮✦───|✧」* 
 `.trim()
    await conn.sendFile(m.chat, pp, '', str, m)
 }
