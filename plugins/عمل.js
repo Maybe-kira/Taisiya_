@@ -46,7 +46,7 @@ let handler = async (m, { conn, command, text, usedPrefix, participants }) => {
     const userCharacterSeletion =
       userChar[Math.floor(Math.random() * userChar.length)]
 
-    let message = `عمل @${mentionedUser.split("@")[0]}\n عـمـلـك هـو  ↞┃🚫┃ *${userCharacterSeletion}*`
+    let message = `عمل @${mentionedUser.split("@")[0]}\n عـمـلـك هـو  ↞┃🦋┃ *${userCharacterSeletion}*`
     
     conn.sendMessage(m.chat, { text: message, mentions: [mentionedUser] }, { quoted: m })
     
