@@ -5,10 +5,10 @@ throw false
 }//غير ڤينوم و حط اسم بوتك
 let pesan = args.join` `
 let oi = `*♚~الرساله:* ${pesan}`
-let teks = `* تفاعلوا↞ * \n\n ${oi}\n\n*『📜┇الجروب┇↡』*\n`
+let teks = `*تفاعل* \n\n ${oi}\n\n*❮ ❄️ ❯↞ ┇الجروب┇*\n`
 for (let mem of participants) {
-teks += `*🍁↞* @${mem.id.split('@')[0]}\n`}
-teks += `*𝑬𝑹𝑰𝑵- 𝑩𝑶𝑻┇✜*\n\n*𝑬𝑹𝑰𝑵&𝑨𝑹𝑻𝑯𝑼𝑹*`
+teks += `*🌸⤪* @${mem.id.split('@')[0]}\n`}
+teks += `*𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴-𝐵𝛩𝑇┇✜*\n\n*𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴*`
 conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
 }
 handler.help = ['tagall <mesaje>','invocar <mesaje>']
