@@ -12,20 +12,20 @@ global.owner = [
   ['967773685143', ' 𝑨𝑹𝑻𝑯𝑼𝑹..🖤', true]
 ];
 // يمكنك تغير البرمجه من هنا كل ما عليك هوا تغير الاصفر مثل '✆⏐' تحط الزخرفه الخاصه بك مثل '★|•' هكذا 
-global.accc = '𝑨𝑹𝑻𝑯𝑼𝑹';
+global.accc = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴';
 global.avvv = '✦ 967773685143';
 global.suittag = ['967773685143', '967773685143'];
 global.prems = ['967773685143', '967773685143'];
 
-global.anabro = "𝑨𝑹𝑻𝑯𝑼𝑹";
-global.veeeee = "  𝑨𝑹𝑻𝑯𝑼𝑹..🖤 \n✦ 967773685143 ✦";
-global.veeee = "𝑨𝑹𝑻𝑯𝑼𝑹";
-global.packname = '𝑨𝑹𝑻𝑯𝑼𝑹';
-global.author = '𝑨𝑹𝑻𝑯𝑼𝑹';
-global.wm = '𝑨𝑹𝑻𝑯𝑼𝑹';
-global.titulowm = '𝑨𝑹𝑻𝑯𝑼𝑹';
+global.anabro = "𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴🎀";
+global.veeeee = "  𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴🎀..🖤 \n✦ 967773685143 ✦";
+global.veeee = "𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴-𝐵𝛩𝑇";
+global.packname = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴🎀';
+global.author = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴-𝐵𝛩𝑇';
+global.wm = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴-𝐵𝛩𝑇🎀';
+global.titulowm = '𝐵𝛩𝑇';
 global.titulowm2 = `𝑨𝑹𝑻𝑯𝑼𝑹`
-global.igfg = '𝑨𝑹𝑻𝑯𝑼𝑹';
+global.igfg = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴';
 global.wait = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -46,9 +46,9 @@ global.mes = d.toLocaleDateString('ar', {month: 'long'});
 global.año = d.toLocaleDateString('ar', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝑨𝑹𝑻𝑯𝑼𝑹`;
-global.gt = '𝑨𝑹𝑻𝑯𝑼𝑹';
-global.mysticbot = '𝑨𝑹𝑻𝑯𝑼𝑹';
+global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴🎀`;
+global.gt = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴';
+global.mysticbot = '𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴🎀';
 global.md = 'https://atom.bio/kurosaki_mah';
 global.mysticbot = 'https://atom.bio/kurosaki_mah';
 global.waitt = '*⌛ _جاري التحميل..._*\n\n*▰▰▰▱▱▱▱▱*';
