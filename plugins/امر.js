@@ -69,8 +69,8 @@ conn.sendMessage(m.chat, {
     }, { quoted: m });
 }; 
 handler.help = ['amrr']
-handler.tags = ['مايزو']
-handler.command = ['ميزو'] 
+handler.tags = ['ميزاو1']
+handler.command = ['ميزو1'] 
 
 export default handler
 function clockString(ms) {
