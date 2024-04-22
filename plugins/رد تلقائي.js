@@ -19,9 +19,9 @@ let handler = m => m;
      responses = [ 
 '*افضل بنت❄️*'
      ]; 
- }else if (/^كاغومي|كاغومي$/i.test(m.text)) { 
+ }else if (/^نوبارا$/i.test(m.text)) { 
      responses = [ 
-'*هل تقصد الخنزير ؟*'
+'*شيخه فاسده*'
      ]; 
    }else if (/^هل تحبببت$/i.test(m.text)) { 
      responses = [ 
