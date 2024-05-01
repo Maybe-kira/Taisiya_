@@ -101,7 +101,7 @@ let handler = m => m;
      ];
             }else if (/^جيت|هلا$/i.test(m.text)) { 
      responses = [ 
-       '*نورت',  
+       'نورت',  
      ];
    }
    if (responses) { 
