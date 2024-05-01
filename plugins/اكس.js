@@ -3,11 +3,11 @@ import TicTacToe from '../lib/tictactoe.js'
 let handler = async (m, { conn, usedPrefix, command, text }) => {
     conn.game = conn.game ? conn.game : {}
     if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw `✦┇ انت ماذلت في الجيم, لحذف الجيم اكتب *${usedPrefix}حذففف┇✓*`
-    if (!text) throw `✳️ Put a number in the room`
+    if (!text) throw `✦┇وضـع رقـم في الـغـرفـة┇✦`
     let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
-        m.reply('*┃تم ايجاد الشخص الاخر┃✓*')
+        m.reply('*┃تـم ايـجـاد الشـخـص الاخـر┃✓*')
         room.o = m.chat
         room.game.playerO = m.sender
         room.state = 'PLAYING'
@@ -27,7 +27,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
             }[v]
         })
         let str = `
-انتظر @${room.game.currentTurn.split('@')[0]} هو اللاعب الاول
+*✦┇انتظر @${room.game.currentTurn.split('@')[0]} هو اللاعب الاول┇✦*
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
@@ -54,10 +54,10 @@ ${arr.slice(6).join('')}
         }
         if (text) room.name = text
 
-     conn.reply(m.chat, `❏ *توقع الشريك*\nاكتب الامر التالي للدخول في نفس الجيم
-❏ *${usedPrefix + command} ${text}*
+     conn.reply(m.chat, `*❏┇🀄تـوقـع الـشـريـك🀄┇❏*\n*✦┇اكتب الامر التالي للدخول في نفس الجيم┇✦*
+❏ *『${usedPrefix + command} ${text}』*
 
-❏ *الجائزه: 4999* اكس بي`, m, {
+┇🎖*الجائزه: 4999* اكس بي┇↞⎔`, m, {
             mentions: conn.parseMention(text)
         })
 
