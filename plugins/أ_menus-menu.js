@@ -72,7 +72,7 @@ let str = `
 *↞ ❮ .ميزو8 ❯* 
 
 *❄️✬⃝┇اوامـر دينـي+سـؤال』*
-*↞ ❮ .ميزو 9 ❯* 
+*↞ ❮ .ميزو9 ❯* 
 
 *❄️✬⃝┇اوامــر  فتح الـبـوت』*
 *↞ ❮ .ميزو10 ❯* 
@@ -95,7 +95,7 @@ conn.sendMessage(m.chat, {
 }; 
 handler.help = ['المهام']
 handler.tags = ['اوامر']
-handler.command = ['الاوامر'] 
+handler.command = ['الاوامر|اوامر'] 
 
 export default handler
 function clockString(ms) {
