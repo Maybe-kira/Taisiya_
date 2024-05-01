@@ -19,7 +19,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPr
     let uptime = clockString(_uptime)
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let videoUrl = 'https://telegra.ph/file/ca978d9b13e271c9340f3.mp4';
+let videoUrl = 'https://telegra.ph/file/8ee9e1ab89e7cf3ba4061.mp4';
   let vn = './media/menu.mp3';
   const user = global.db.data.users[m.sender];
   const {money, joincount} = global.db.data.users[m.sender];
@@ -45,7 +45,7 @@ let str = `
 
 *✓بوت مطور بذكاء اصطناعي وكل امور التسلية✓┃🌐┃┊*
 
-*❯⏐ 𝐵𝛩𝑇 𝐸𝑅𝑺𝑁*
+*❯⏐ 𝐵𝛩𝑇 𝑀𝐼𝑍𝑈𝐻𝐴𝑅𝐴*
 https://wa.me/967773685143
  `.trim();
 
