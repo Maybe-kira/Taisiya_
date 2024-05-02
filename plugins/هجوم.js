@@ -12,7 +12,7 @@ let rob = Math.floor(Math.random() * ro)
 if (users.exp < rob) return m.reply(`*✦┇😔 @${who.split`@`[0]} لديه أقل من${ro} xp\nلا تسرق رجل فقير┇✦*`, null, { mentions: [who] })    
 global.db.data.users[m.sender].exp += rob
 global.db.data.users[who].exp -= rob 
-m.reply(`*✦┇‣ انت سرقت ${rob} XP من @${who.split`@`[0]}┇✦*`, null, { mentions: [who] })
+m.reply(`✦┇‣ انت سرقت ${rob} XP من @${who.split`@`[0]}┇✦`, null, { mentions: [who] })
 global.db.data.users[m.sender].lastrob = new Date * 1
 }
 handler.help = ['rob']
