@@ -13,7 +13,7 @@ const madaraSchema = new mongoose.Schema({
     messageCount: { type: Number, default: 0 } // عدد الرسائل
 });
 
-const madara = mongoose.model("madara", madaraSchema);
+const Madara = mongoose.model("Madara", madaraSchema);
 
 let handler = async function (msg, { conn: _, text, command, isAdmin }) {
     try {
@@ -26,7 +26,7 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
                 msg.reply("*⌘¦هـذا الأمـر لـلـمـشـرفـيـن فـقـط¦❌|*");
                 return;
             }
-            const data = await madara.find({ groupId: msg.chat });
+            const data = await Madara.find({ groupId: msg.chat });
             if (data.length === 0) {
                 msg.reply("*⌘¦لا يـوجـد الـقـاب مـسـجـلـة بـعـد¦🎯|*");
             } else {
@@ -68,7 +68,7 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
                 return;
             }
 
-            const existingNickname = await madara.findOne({
+            const existingNickname = await Madara.findOne({
                 madara: nickname,
                 groupId: msg.chat
             });
@@ -76,10 +76,10 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
                 const takenBy = await _.getName(existingNickname.userId + "@s.whatsapp.net");
                 msg.reply(`*⌘¦الـلـقـب* ${nickname} *مأخوذ بواسطة :* ${takenBy}`);
             } else {
-                await madara.findOneAndUpdate(
+                await Madara.findOneAndUpdate(
                     { userId: mentionedUser, groupId: msg.chat },
                     { madara: nickname },
-                    { upsert: true }
+                    { upsert: true, new: true }
                 );
                 msg.reply(`*⌘¦تـم تسجيله بلقب* ${nickname} *بـنـجـاح ✅*`);
             }
@@ -97,7 +97,7 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
                 return;
             }
             const nicknameToDelete = text.trim();
-            const deletedResult = await madara.deleteOne({
+            const deletedResult = await Madara.deleteOne({
                 madara: nicknameToDelete,
                 groupId: msg.chat
             });
@@ -109,7 +109,7 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
         } else if (command === "لقبي") {
             try {
                 const senderId = msg.sender.split("@")[0];
-                const userNickname = await madara.findOne({
+                const userNickname = await Madara.findOne({
                     userId: senderId,
                     groupId: msg.chat
                 });
@@ -128,7 +128,7 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
                 return;
             }
             const userToCheck = msg.mentionedJid[0].replace("@s.whatsapp.net", "");
-            const userNickname = await madara.findOne({
+            const userNickname = await Madara.findOne({
                 userId: userToCheck,
                 groupId: msg.chat
             });
@@ -139,25 +139,25 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
             }
         } else if (command === "لقب") {
             if (!text || text.trim() === "") {
-                msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه الـلـقـب لـمـعـرفـة اذا كـان أحـدٌ قـد أخـذهُ أو لا¦🧭|*");
-                return;
-            }
-            const nicknameToCheck = text.trim();
-            const nicknameData = await madara.findOne({
-                madara: nicknameToCheck,
-                groupId: msg.chat
-            });
-            if (nicknameData) {
-                const userTakingTheNickname = await _.getName(nicknameData.userId + "@s.whatsapp.net");
-                msg.reply(`*⌘¦الـلـقـب* ${nicknameToCheck} *مـأخـوذ مـن:* ${userTakingTheNickname}`);
-            } else {
-                msg.reply(`*⌘¦الـلـقـب* ${nicknameToCheck} *مـتـاح*`);
-            }
-        }
-    } catch (error) {
-        console.error("Error in handler:", error);
-        msg.reply("*⌘¦عـذرا. هـنـاك خـطـئ¦❌|*");
-    }
+                msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه الـلـقـب لـمـعـرفـة اذا كـان أحـدٌ قـد أخـذهُ أو لا¦🧭|*”);
+return;
+}
+const nicknameToCheck = text.trim();
+const nicknameData = await Madara.findOne({
+madara: nicknameToCheck,
+groupId: msg.chat
+});
+if (nicknameData) {
+const userTakingTheNickname = await _.getName(nicknameData.userId + “@s.whatsapp.net”);
+msg.reply(*⌘¦الـلـقـب* ${nicknameToCheck} *مـأخـوذ مـن:* ${userTakingTheNickname});
+} else {
+msg.reply(*⌘¦الـلـقـب* ${nicknameToCheck} *مـتـاح*);
+}
+}
+} catch (error) {
+console.error(“Error in handler:”, error);
+msg.reply(”⌘¦عـذرا. هـنـاك خـطـئ¦❌|”);
+}
 };
 handler.command = ["الألقاب", "تسجيل", "لقبي", "لقبه", "حذف_لقب", "لقب"];
 handler.tags = ["patchera"];
