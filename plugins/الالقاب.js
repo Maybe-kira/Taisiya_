@@ -140,24 +140,23 @@ let handler = async function (msg, { conn: _, text, command, isAdmin }) {
         } else if (command === "لقب") {
             if (!text || text.trim() === "") {
                 msg.reply("*⌘¦يـجـب كـتـابـة الأمـر وجـنـبـه الـلـقـب لـمـعـرفـة اذا كـان أحـدٌ قـد أخـذهُ أو لا¦🧭|*”);
-return;
-}
-const nicknameToCheck = text.trim();
-const nicknameData = await Madara.findOne({
-madara: nicknameToCheck,
-groupId: msg.chat
-});
-if (nicknameData) {
-const userTakingTheNickname = await _.getName(nicknameData.userId + “@s.whatsapp.net”);
-msg.reply(*⌘¦الـلـقـب* ${nicknameToCheck} *مـأخـوذ مـن:* ${userTakingTheNickname});
-} else {
-msg.reply(*⌘¦الـلـقـب* ${nicknameToCheck} *مـتـاح*);
-}
-}
-} catch (error) {
-console.error(“Error in handler:”, error);
-msg.reply(”⌘¦عـذرا. هـنـاك خـطـئ¦❌|”);
-}
+                return;
+            }
+            const nicknameToCheck = text.trim();
+            const nicknameData = await madara.findOne({
+                madara: nicknameToCheck,
+                groupId: msg.chat
+            });
+            if (nicknameData) {
+                const userTakingTheNickname = await _.getName(nicknameData.userId.split("@")[0]);
+                msg.reply("*⌘¦الـلـقـب* " + nicknameToCheck + " *مـأخـوذ مـن:* " + userTakingTheNickname);
+            } else {
+                msg.reply("*⌘¦الـلـقـب* " + nicknameToCheck + " *مـتـوفـر*");
+            }
+        } else {}
+    } catch (err) {
+        console.error("خطأ", err);
+    }
 };
 handler.command = ["الألقاب", "تسجيل", "لقبي", "لقبه", "حذف_لقب", "لقب"];
 handler.tags = ["patchera"];
